@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.createElement("myhero");
+    </script>
+    <style>
+        myhero{
+            background: yellow;
+            padding: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+<!--1-->
+<h1>标题</h1>
+<p>this is title</p>
+<myhero>
+    this is test
+</myhero>
+
+<!--2-->
+<article><!--定义页面的独立内容-->
+    this is a artical
+</article>
+
+<!--3-->
+<canvas id="canvas" width="200px" height="200px" style="border: yellow solid 2px">
+    <!--canvas用于图形绘制-->
+<p>通过脚本改变颜色</p>
+</canvas>
+<!--canvas 需要用脚本获取颜色-->
+<script>
+    var IDgetter = document.getElementById("canvas");
+    var ctx= IDgetter.getContext("2d");<!--创建context对象-->
+    ctx.fillStyle="#444444";
+    ctx.fillRect(190,100,200,200);
+</script>
+<canvas id="canvas1" width="200px" height="200px" style="border: yellow solid 2px">
+    <!--canvas用于图形绘制-->
+    <p>通过脚本改变颜色</p>
+</canvas>
+<script>
+    var IDgetter=document.getElementById("canvas1");
+    var ctx=IDgetter.getContext("2d");
+    ctx.moveTo(0,0);
+    ctx.lineTo(200,200);
+    ctx.stroke()
+</script>
+<canvas id="canvas2" width="200px" height="200px" style="border: yellow solid 2px">
+    <!--canvas用于图形绘制-->
+    <p>通过脚本改变颜色</p>
+</canvas>
+<script>
+    var IDgetter=document.getElementById("canvas2");
+    var ctx=IDgetter.getContext("2d");
+    ctx.beginPath();
+    ctx.arc(0,0,40,0,2*Math.PI);
+    ctx.stroke()
+</script>
+</body>
+</html>
